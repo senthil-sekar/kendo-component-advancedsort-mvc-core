@@ -1,5 +1,4 @@
-# kendo-component-advancedsort-mvc-core
-AdavancedSort Component for Kendo Grid - .Net Core Version
+# AdavancedSort Component for Kendo Grid - .Net Core Version
 
 This project is aimed to create a razor view component using razor class library, for the purpose of reusability and modularity. 
 
