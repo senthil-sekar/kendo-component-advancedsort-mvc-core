@@ -1,0 +1,36 @@
+﻿<div>
+    <div class="row">
+        <div class="col-md-12" id="sort-criteria-validation-msg"></div>
+    </div>
+    <div class="row">
+        <div class="pull-left">
+            <div id="sort-message">
+                <span class="k-icon k-i-info"></span>&nbsp;<span id="message"></span>
+            </div>
+        </div>
+        <div class="pull-right">
+            <button class="k-button-primary" id="applyAdvancedSort" title="Apply Sort"><span class="k-icon k-i-check"></span>Apply Sort</button>
+            <button class="k-button-primary" id="resetAdvancedSort" disabled title="Reset to Previous State"><span class="k-icon k-i-reset"></span>Reset</button>
+            <button class="k-button-primary" id="clearAdvancedSort" title="Clear Sort Columns"><span class="k-icon k-i-cancel"></span>Clear</button>
+        </div>
+        <div style="clear:both"></div>
+        <div id="sort-criteria" role="application">
+            <div class="sort-criteria-section k-content wide">
+                <label class="sort-criteria-header" for="available" id="sortcolumns">Available Columns</label>
+                <label class="sort-criteria-header" for="selected">Sort Columns</label>
+                <br />
+                <select data-role="listbox" id="advanced-sort-available" name="advanced-sort-available"></select>
+                <select data-role="listbox" id="advanced-sort-selected" name="advanced-sort-selected"></select>
+            </div>
+        </div>
+    </div>
+</div>
+<script id="selected-sort-column-template" type="text/x-kendo-template">
+    #: data.columnName #
+    <div class="pull-right">
+        <div class="advanced-sort-order" id="advanced-sort-order-#: data.columnValue #">
+            <span data-icon="sort-asc" title="Ascending"></span>
+            <span data-icon="sort-desc" title="Descending"></span>
+        </div>
+    </div>
+</script>

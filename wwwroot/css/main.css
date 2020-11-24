@@ -1,0 +1,82 @@
+﻿.k-button-primary .k-icon {
+    margin-right: 2px;
+    top: -1px;
+}
+
+.advanced-sort-order {
+    top: -1.5px;
+}
+
+    .advanced-sort-order .k-button {
+        height: 20px;
+    }
+
+    .advanced-sort-order .k-state-active {
+        background-color: #428bca !important;
+        color: #ffffff !important;
+    }
+
+.sort-content {
+    margin: 0 10px 0 10px;
+    height: 96%;
+}
+
+.sort-criteria-section .sort-criteria-header {
+    margin-bottom: 5px;
+    margin-top: unset;
+    margin-left: unset;
+    font-weight: bold;
+    font-family: Calibri;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.sort-criteria-section.k-content.wide{
+    height: 97%
+}
+
+#sortcolumns {
+    width: 50%;
+}
+
+#sort-criteria {
+    height: 93%;
+}
+
+#sort-criteria .sort-criteria-section {
+    max-width: none;
+    width: 99%;
+}
+
+#sort-criteria .k-listbox {
+    width: 49.5%;
+    min-height: 300px;
+    height: 100%
+}
+
+    #sort-criteria .k-listbox:first-of-type {
+        width: 49.5%;
+        margin-right: 1px;
+    }
+
+#sort-message {
+    font-weight: bold;
+    color: #428bca
+}
+
+    #sort-message .k-icon {
+        position: relative;
+        top: -2px;
+    }
+
+.k-list-scroller.k-selectable {
+    min-height: 300px;
+}
+
+.k-widget.k-listbox.k-listbox-toolbar-right{
+    display: inline-table;
+}
+
+.sort-content > div:first-of-type, .sort-content > div:first-of-type > .row:nth-of-type(2) {
+    height: 100%;
+}

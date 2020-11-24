@@ -1,0 +1,1 @@
+﻿nuget add C:\Git\Kendo.Component.AdvancedSort.Mvc.Core\bin\Release\netcoreapp3.1\publish\Kendo.Component.AdvancedSort.Mvc.Core.1.0.0.nupkg -source \\nuget-offline\packages\

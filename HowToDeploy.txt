@@ -1,0 +1,28 @@
+﻿/* Packing and deploying: */
+
+    This component is deployed as nuget package for the consuming app. So please follow the below steps to deploy this component, whenever a change has been made.
+
+    1.First Update the major or minor version depends on your change. 
+        - Right click on the project, go to properties, and then go to package section.
+        - Update the version number under Package Version, Assembly version & Assembly file version.
+        - Give some notes about your chage in Release Notes section
+
+    2.Now Publish (right click on the project in VS and click on publish) the app. This will create a Kendo.Component.AdvancedSort.Mvc.Core.1.0.0.nupkg file 
+      under '{your project root folder}\WebComponentLibrary\Kendo.Component.AdvancedSort.Mvc.Core\bin\Release\netcoreapp3.1\publish' folder
+
+    3.Next step is to use nuget.exe to deploy the package to shared package folder.
+      - If you dont have already, please download the nuget.exe from here https://www.nuget.org/downloads
+      - Shared package folder for our nuget packages is \\nuget-offline\package\
+
+        Now follow the below steps
+
+        - Open CMD promt in ADMIN mode
+        - CD to the location where your nuget.exe file is e.g CD C:\Nuget
+        - Run this command 
+            'nuget add {your project root folder}\WebComponentLibrary\Kendo.Component.AdvancedSort.Mvc.Core\bin\Release\netcoreapp3.1\publish\Kendo.Component.AdvancedSort.Mvc.Core.1.0.0.nupkg -source \\nuget-offline\package\'
+          Dont forget to replace {your project root folder} with your folder path.
+  
+    You have now deployed a new version of nuget package for this project. Go to your consuming app and update the package to this newer version, as you normally do for any other nuget package.
+
+    Important!!! 
+    All tsconfig.json files should be excluded from the build output. You can do that by right clicking the tsconfig.json file, going to properties, setting Build Action to None.

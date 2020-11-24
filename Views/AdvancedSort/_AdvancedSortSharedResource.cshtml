@@ -1,0 +1,49 @@
+﻿@using Kendo.Component.AdvancedSort.Mvc.Core
+@using Kendo.Component.AdvancedSort.Mvc.Core.Common
+@using Kendo.Component.AdvancedSort.Mvc.Core.Models
+@model GridComponentConfigModel
+@{
+    var loadSharedResource = Convert.ToBoolean(ViewContext.HttpContext.Items[AppConstant.AdvancedSortSharedResourceKey]);
+    if (loadSharedResource)
+    {
+        @Html.LoadJavaScript("require.js").Deferred(true).RenderAsClientTemplate(Model.RenderAsClientTemplate)
+        @Html.LoadJavaScript("AdvancedSort/AdvancedSort.js").Deferred(true).RenderAsClientTemplate(Model.RenderAsClientTemplate)
+        @Html.LoadJavaScript("AdvancedSort/AdvancedSortRoot.js").RenderAsClientTemplate(Model.RenderAsClientTemplate)
+        @Html.LoadCss("main.css")
+        @Html.ActionLink("GetAdvancedSortPopup", "GetAdvancedSortPopup", "AdvancedSort"
+            , new { Area = "" }
+            , new
+            {
+                @id = "GetAdvancedSortPopupId",
+                @class = "hide",
+                @data_error_title = "Sort Criteria",
+                @data_error = "An error has occurred while adding Sort Criteria, Please try again."
+            })
+    }
+
+    if (!Model.UseDefaultSortIconStyle)
+    {
+        var gridSelector = string.Format("{0}#{1}", Model.RenderAsClientTemplate ? "\\" : string.Empty, Model.GridName);
+        <style type="text/css">
+            @gridSelector .k-grid-header th.k-header {
+                position: relative;
+            }
+            @gridSelector .k-grid-header th > .k-link > .k-sort-order {
+                position: absolute;
+                top: 33%;
+                right: 24px;
+            }
+            @gridSelector .k-grid-header th > .k-link > .k-icon.k-i-sort-asc-sm,
+            @gridSelector .k-grid-header th > .k-link > .k-icon.k-i-sort-desc-sm {
+                position: absolute;
+                top: 33%;
+            }
+            @gridSelector .k-grid-header th > .k-link > .k-icon.k-i-sort-asc-sm {
+                right: 25px;
+            }
+            @gridSelector .k-grid-header th > .k-link > .k-icon.k-i-sort-desc-sm {
+                right: 25px;
+            }
+        </style>
+    }
+}

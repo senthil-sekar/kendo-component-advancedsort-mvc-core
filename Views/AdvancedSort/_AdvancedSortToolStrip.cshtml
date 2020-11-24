@@ -1,0 +1,11 @@
+﻿@using Newtonsoft.Json;
+@using Kendo.Component.AdvancedSort.Mvc.Core
+@using Kendo.Component.AdvancedSort.Mvc.Core.Models
+@model GridComponentConfigModel
+@Html.AdvancedSortSharedResource(new { UseDefaultSortIconStyle = Model.UseDefaultSortIconStyle, RenderAsClientTemplate = Model.RenderAsClientTemplate, GridName = Model.GridName })
+<a style="@(string.IsNullOrEmpty(Model.ButtonOpenSortStyle) ? "margin-left:5px" : Model.ButtonOpenSortStyle)" class="k-button-primary" title="Open Sort Popup" id="@Model.GridName-openpopup"><span class="k-icon k-i-sort-desc"></span></a>
+<a style="@(string.IsNullOrEmpty(Model.ButtonClearSortStyle) ? "margin-left:5px" : Model.ButtonClearSortStyle)" class="k-button-primary" title="Clear Sort" id="@Model.GridName-clearsort"><span class="k-icon k-i-sort-clear"></span></a>
+@if (!Model.PreventAutoInitialize)
+{
+    @Html.AdvancedSortInvokeScript(Model)
+}
