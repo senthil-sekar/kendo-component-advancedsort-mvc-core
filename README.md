@@ -2,7 +2,7 @@
 
 This project is aimed to create a razor view component using razor class library, for the purpose of reusability and modularity. 
 
-/* Usage */
+/*Usage*/
 
 This component is a asp.net mvc core driven class library project, so the client project can use this compenent by referencing to this project dll.
 
@@ -11,7 +11,7 @@ Pre-Requisite:
     - This component is created for .NET Core 3.1, so the client ptoject should also be .NET Core 3.1 or above
     - This project is a custom component extention for Kendo MVC dll. So the client project must have all the Kendo MVC references added.
 
-/* Adding the component to the project: */
+/*Adding the component to the project:*/
 
     via Nuget
         - Create a custom nuget packge source with path \\nuget-offline\package\
@@ -75,7 +75,7 @@ Pre-Requisite:
                     UseDefaultSortIconStyle: true           //optional, default is false
                 });
 
-/* Packing and deploying: */
+/*Packing and deploying:*/
 
     This component is deployed as nuget package for the consuming app. So please follow the below steps to deploy this component, whenever a change has been made.
 
