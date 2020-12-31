@@ -2,7 +2,7 @@
 
 This project is aimed to create a razor view component using razor class library, for the purpose of reusability and modularity. 
 
-/*Usage*/
+/* Usage */
 
 This component is a asp.net mvc core driven class library project, so the client project can use this compenent by referencing to this project dll.
 
